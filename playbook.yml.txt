@@ -1,0 +1,55 @@
+---
+- name: Configure VM and deploy NGINX
+  hosts: local
+  become: true  # Ensure true is used
+  vars:
+    nginx_container_name: my_nginx
+    nginx_image: nginx:latest
+    host_port: 8080
+    container_port: 80
+  tasks:
+    - name: Ensure Docker is installed
+      apt:
+        name: docker.io
+        state: present
+        update_cache: true
+
+    - name: Ensure pip and dependencies are installed
+      apt:
+        name:
+          - python3-pip
+          - python3-setuptools
+          - python3-venv
+        state: present
+        update_cache: true
+
+    - name: Ensure Docker SDK for Python is installed
+      pip:
+        name: docker
+        state: present
+
+    - name: Ensure Docker service is running
+      service:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Pull NGINX image
+      docker_image:
+        name: "{{ nginx_image }}"
+        source: pull
+
+    - name: Run NGINX container
+      docker_container:
+        name: "{{ nginx_container_name }}"
+        image: "{{ nginx_image }}"
+        state: started
+        restart_policy: always
+        ports:
+          - "{{ host_port }}:{{ container_port }}"
+        container_default_behavior: compatibility
+
+    - name: Verify NGINX web app is accessible
+      uri:
+        url: "http://localhost:{{ 8080 }}"
+        status_code: 200
