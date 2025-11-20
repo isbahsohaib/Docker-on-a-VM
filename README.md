@@ -16,8 +16,6 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
 2. **Azure Linux VM**: SSH in, install Ansible, and run the playbook to deploy Docker and NGINX.
 3. **Docker Container**: Runs NGINX serving the web application (default or custom HTML page).
 
-![Architecture Diagram](https://docs.google.com/drawings/d/14oQbJ6M5saOSqNurk33mgnU3YnSl6wU0uL4t9WpQSSg/edit?usp=sharing)
-
 ## Prerequisites
 
 - Terraform 1.13.5
