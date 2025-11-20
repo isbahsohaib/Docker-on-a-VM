@@ -53,6 +53,6 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
 - Idempotent playbooks for consistent configuration
 
 References:
-Architecture Diagram: https://docs.google.com/drawings/d/14oQbJ6M5saOSqNurk33mgnU3YnSl6wU0uL4t9WpQSSg/edit
-Proposal: https://docs.google.com/document/d/1qzPlCKuDZRuMJKuOMnheaMsIeYi-jeF5eQtzdBj__mc/edit?usp=sharing
-Report: https://docs.google.com/document/d/1i_r1BH4HosA1xlPNU0PawpuDcMYG_MIjcKbhq7oLI0A/edit?usp=sharing
+- Architecture Diagram: https://docs.google.com/drawings/d/14oQbJ6M5saOSqNurk33mgnU3YnSl6wU0uL4t9WpQSSg/edit
+- Proposal: https://docs.google.com/document/d/1qzPlCKuDZRuMJKuOMnheaMsIeYi-jeF5eQtzdBj__mc/edit?usp=sharing
+- Report: https://docs.google.com/document/d/1i_r1BH4HosA1xlPNU0PawpuDcMYG_MIjcKbhq7oLI0A/edit?usp=sharing
