@@ -7,7 +7,7 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
 - **Terraform**: Provisions Azure resources including Resource Group, VNet, Subnet, NSG, Public IP, NIC, and Linux VM.
 - **Ansible**: Installs Docker, required Python dependencies, and deploys the NGINX container.
 - **Idempotence**: Re-running the playbook makes no unnecessary changes.
-- **Security**: Only SSH (22) and HTTP (80) ports open; system updates applied.
+- **Security**: Only SSH (22) and HTTP (80) ports open.
 - **Stretch Goal**: Custom HTML page mounted into the NGINX container via Ansible.
 
 ## Architecture
