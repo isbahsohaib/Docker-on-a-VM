@@ -41,6 +41,7 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
 3. Ansible (Inside deployed VM):
    
    a. SSH into the Linux VM and install Ansible.
+   
    b. Run the playbook:
    ```bash 
    ansible-playbook playbook.yml
