@@ -31,6 +31,7 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
    cd <repo-directory>
 
 2. Terraform (On Control Node):
+   
    a. Log into your Azure account
    ```bash 
    terraform init
@@ -38,7 +39,7 @@ Automated deployment of a containerized NGINX web application on an Azure Virtua
    terraform plan
    terraform apply
 
-3. Ansible (Inside deployed VM):
+4. Ansible (Inside deployed VM):
    
    a. SSH into the Linux VM and install Ansible.
    
